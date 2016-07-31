@@ -1,0 +1,8 @@
+c:\users\loky\documents\visual studio 2015\Projects\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Form1.resources
+c:\users\loky\documents\visual studio 2015\Projects\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Properties.Resources.resources
+c:\users\loky\documents\visual studio 2015\Projects\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csproj.GenerateResource.Cache
+c:\users\loky\documents\visual studio 2015\Projects\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe
+c:\users\loky\documents\visual studio 2015\Projects\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.pdb
+c:\users\loky\documents\visual studio 2015\Projects\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.exe
+c:\users\loky\documents\visual studio 2015\Projects\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.pdb
+C:\Users\Loky\documents\visual studio 2015\Projects\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csprojResolveAssemblyReference.cache

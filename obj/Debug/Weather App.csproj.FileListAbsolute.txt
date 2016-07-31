@@ -1,0 +1,7 @@
+C:\Users\Loky\documents\visual studio 2015\Projects\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe
+C:\Users\Loky\documents\visual studio 2015\Projects\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.pdb
+C:\Users\Loky\documents\visual studio 2015\Projects\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Properties.Resources.resources
+C:\Users\Loky\documents\visual studio 2015\Projects\WindowsFormsApplication2\obj\Debug\Weather App.csproj.GenerateResource.Cache
+C:\Users\Loky\documents\visual studio 2015\Projects\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.exe
+C:\Users\Loky\documents\visual studio 2015\Projects\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.pdb
+C:\Users\Loky\documents\visual studio 2015\Projects\WindowsFormsApplication2\obj\Debug\WeatherApp.Form1.resources
