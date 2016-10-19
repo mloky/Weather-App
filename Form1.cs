@@ -7,13 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using System.Net.Sockets;
+using System.Net;
 
 namespace WeatherApp
 {
     public partial class Form1 : Form
     {
         XDocument doc;
-        DataTable datatable = new DataTable();        
+        DataTable datatable = new DataTable();
+
+        //Socket client;
+               
         public Form1()
         {
             InitializeComponent();
@@ -24,6 +29,13 @@ namespace WeatherApp
             label1.Text = "Weather App";
             datatable.Columns.Add("Place", typeof(string));
             datatable.Columns.Add("Status", typeof(string));
+
+            //IPEndPoint localEndPoint = new IPEndPoint(IPAddress.Any, 1800);
+            //Socket newsock = new Socket(AddressFamily.InterNetwork,
+            //                   SocketType.Stream, ProtocolType.Tcp);
+            //newsock.Bind(localEndPoint);
+            //newsock.Listen(10);
+            //client = newsock.Accept();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -57,7 +69,8 @@ namespace WeatherApp
             dataGridView1.Columns["Place"].Width += 10;
             dataGridView1.Columns["Status"].Width = dataGridView1.Columns["Place"].Width;
             dataGridView1.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            
+
+            //incoming();
         }
         private string statusConverter(string status)
         {
@@ -134,5 +147,26 @@ namespace WeatherApp
             }
 
         }
+
+        private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            textBox2.Text = dataGridView1[e.ColumnIndex, e.RowIndex].Value.ToString();
+        }
+/*        private void incoming()
+        {    
+            int metaDataSize = 105;
+            byte[] buffer = new byte[metaDataSize];
+            
+            int readBytes = 0;
+            while (readBytes < 105) {
+                readBytes = readBytes + client.Receive(buffer);
+            }
+            
+            if (readBytes == 0)
+                return;
+            //string cmdMetaData = System.Text.Encoding.Unicode.GetString(buffer);
+            string cmdMetaData = System.Text.Encoding.Default.GetString(buffer);
+            textBox2.Text = cmdMetaData;
+        } */
     }
 }
