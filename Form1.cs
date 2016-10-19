@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*Changelog:
+    
+    -Website URL changed from http://www.nea.gov.sg/api/WebAPI/ to http://api.nea.gov.sg/api/WebAPI/ since 1 Oct 2016
+
+*/
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +22,9 @@ namespace WeatherApp
         XDocument doc;
         DataTable datatable = new DataTable();
 
+        //ASSIGN YOUR AUTHORIZATION KEY TO NEA_Key
+        string NEA_Key= "";
+
         //Socket client;
                
         public Form1()
@@ -25,7 +33,7 @@ namespace WeatherApp
         }
         public void Form1_Load(object sender,EventArgs e)
         {            
-            doc = XDocument.Load("http://www.nea.gov.sg/api/WebAPI/?dataset=2hr_nowcast&keyref=781CF461BB6606AD120881175FC7406143EB903BCB3FC42D");
+            doc = XDocument.Load("http://api.nea.gov.sg/api/WebAPI/?dataset=2hr_nowcast&keyref="+NEA_Key);
             label1.Text = "Weather App";
             datatable.Columns.Add("Place", typeof(string));
             datatable.Columns.Add("Status", typeof(string));
