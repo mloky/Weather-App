@@ -22,28 +22,19 @@ namespace WeatherApp
         XDocument doc;
         DataTable datatable = new DataTable();
 
-        //ASSIGN YOUR AUTHORIZATION KEY TO NEA_Key
-        string NEA_Key= "";
-
-        //Socket client;
+        string NEA_Key;
                
         public Form1()
         {
             InitializeComponent();
         }
         public void Form1_Load(object sender,EventArgs e)
-        {            
+        {
+            NEA_Key = WindowsFormsApplication2.Properties.Settings.Default.apiKey;
             doc = XDocument.Load("http://api.nea.gov.sg/api/WebAPI/?dataset=2hr_nowcast&keyref="+NEA_Key);
             label1.Text = "Weather App";
             datatable.Columns.Add("Place", typeof(string));
-            datatable.Columns.Add("Status", typeof(string));
-
-            //IPEndPoint localEndPoint = new IPEndPoint(IPAddress.Any, 1800);
-            //Socket newsock = new Socket(AddressFamily.InterNetwork,
-            //                   SocketType.Stream, ProtocolType.Tcp);
-            //newsock.Bind(localEndPoint);
-            //newsock.Listen(10);
-            //client = newsock.Accept();
+            datatable.Columns.Add("Status", typeof(string));            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -77,8 +68,6 @@ namespace WeatherApp
             dataGridView1.Columns["Place"].Width += 10;
             dataGridView1.Columns["Status"].Width = dataGridView1.Columns["Place"].Width;
             dataGridView1.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-
-            //incoming();
         }
         private string statusConverter(string status)
         {
@@ -160,21 +149,20 @@ namespace WeatherApp
         {
             textBox2.Text = dataGridView1[e.ColumnIndex, e.RowIndex].Value.ToString();
         }
-/*        private void incoming()
-        {    
-            int metaDataSize = 105;
-            byte[] buffer = new byte[metaDataSize];
-            
-            int readBytes = 0;
-            while (readBytes < 105) {
-                readBytes = readBytes + client.Receive(buffer);
-            }
-            
-            if (readBytes == 0)
-                return;
-            //string cmdMetaData = System.Text.Encoding.Unicode.GetString(buffer);
-            string cmdMetaData = System.Text.Encoding.Default.GetString(buffer);
-            textBox2.Text = cmdMetaData;
-        } */
+
+        private void apiKeyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            apiKeyTextBox.Visible = true;
+            button2.Visible = true;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            button2.Visible = false;
+            NEA_Key = apiKeyTextBox.Text;
+            WindowsFormsApplication2.Properties.Settings.Default.apiKey = NEA_Key;
+            WindowsFormsApplication2.Properties.Settings.Default.Save();
+            apiKeyTextBox.Visible = false;
+        }        
     }
 }
