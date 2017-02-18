@@ -1,10 +1,9 @@
 # Weather-App
 Testing in Progress
 
-WARNING!!!
-
-Before running, insert your authorization key into the given string variable in Form1.cs found in line 26.
-
+Update 3:
+- Apparently, no API key is needed to access the API. Not sure if it is intended as of 180217.
+- If they fixed it, enter your own key using the menu buttons.
 
 Update 2:
 
