@@ -6,3 +6,4 @@ C:\Users\Loky\Documents\Visual Studio 2015\Projects\WindowsFormsApplication2\obj
 C:\Users\Loky\Documents\Visual Studio 2015\Projects\WindowsFormsApplication2\obj\Debug\Weather App.csproj.GenerateResource.Cache
 C:\Users\Loky\Documents\Visual Studio 2015\Projects\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.exe
 C:\Users\Loky\Documents\Visual Studio 2015\Projects\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.pdb
+C:\Users\Loky\Documents\Visual Studio 2015\Projects\WindowsFormsApplication2\obj\Debug\Weather App.csprojResolveAssemblyReference.cache

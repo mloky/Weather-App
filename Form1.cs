@@ -22,8 +22,8 @@ namespace WeatherApp
         XDocument doc;
         DataTable datatable = new DataTable();
 
-        string NEA_Key;
-               
+        string NEA_Key= "781CF461BB6606AD120881175FC7406143EB903BCB3FC42D";
+
         public Form1()
         {
             InitializeComponent();
@@ -31,7 +31,7 @@ namespace WeatherApp
         public void Form1_Load(object sender,EventArgs e)
         {
             NEA_Key = WindowsFormsApplication2.Properties.Settings.Default.apiKey;
-            doc = XDocument.Load("http://api.nea.gov.sg/api/WebAPI/?dataset=2hr_nowcast&keyref="+NEA_Key);
+            
             label1.Text = "Weather App";
             datatable.Columns.Add("Place", typeof(string));
             datatable.Columns.Add("Status", typeof(string));            
@@ -39,6 +39,16 @@ namespace WeatherApp
 
         private void button1_Click(object sender, EventArgs e)
         {
+            try
+            {
+                doc = XDocument.Load("http://api.nea.gov.sg/api/WebAPI/?dataset=2hr_nowcast&keyref=" + NEA_Key);
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+                return;
+            }
+            
             datatable.Rows.Clear();
             var areas = doc.Descendants("area");
             var forecast_period = doc.Descendants("validTime");
