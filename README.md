@@ -1,6 +1,10 @@
 # Weather-App
 Testing in Progress
 
+Update 5:
+- Updated to work but requires personal API key
+- Menu bar->Edit->API Key to reveal a textbox to enter your personal API key
+
 Update 4:
 - Does not work anymore as API/Dataset source has been moved to new host.
 - No intention to update code as of yet.
