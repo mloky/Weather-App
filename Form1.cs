@@ -22,7 +22,7 @@ namespace WeatherApp
         XDocument doc;
         DataTable datatable = new DataTable();
 
-        string NEA_Key= "781CF461BB6606AD120881175FC7406143EB903BCB3FC42D";
+        string NEA_Key= "";
 
         public Form1()
         {
